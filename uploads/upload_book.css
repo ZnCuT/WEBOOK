@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white; /* 设置背景颜色 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    margin: 0; /* 去除默认外边距 */
+    padding: 0; /* 添加内边距 */
+}
+
+header {
+    background-color: #3C5B92; /* 大标题背景色为蓝色 */
+    color: white; /* 字体颜色为白色 */
+    text-align: center; /* 标题居中对齐 */
+    padding: 20px; /* 标题内边距 */
+    margin: 0; /* 去除标题外边距 */
+}
+
+h1 {
+    color: white; /* 设置标题颜色 */
+    text-align: center; /* 标题居中 */
+}
+
+h2 {
+    color: black;
+    text-align: center; /* 修正了这里的语法错误 */
+}
+
+p {
+    font-size: 16px; /* 设置段落字体大小 */
+    line-height: 1.5; /* 设置行高 */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* 左右两边对齐 */
+    padding: 20px;
+    height: 300px; /* 添加分号 */
+}
+
+.left-sidebar {
+    flex: 1;
+    order: 1;
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px;
+    border: 10px #3C5B92 dashed; /* 添加分号 */
+    color: #3C5B92;
+}
+p{
+    color:rgb(155, 27, 27)
+}
+.right-sidebar {
+    flex: 1;
+    order: 2; /* 添加分号 */
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px;
+    border: 10px #3C5B92 solid; /* 添加分号 */
+}
+
+button {
+    background-color: #3C5B92;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px; /* 添加分号 */
+    border: 8px #3C5B92 solid; /* 添加分号 */
+}
+button:hover {
+    border-color: rgb(71, 141, 179);
+    background-color: rgb(71, 141, 179);
+}

@@ -1,0 +1,98 @@
+/* Reset CSS */
+
+
+/* Basic Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: url('background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  width: 95%;
+  padding: 15px 50px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Container to Wrap the Content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+header p {
+  font-size: 18px;
+  color: #bbbbbb;
+}
+
+/* Info Section Styles */
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info:nth-child(even) {
+  flex-direction: row-reverse; /* Alternate layout for every second section */
+}
+
+/* Text Block Styles */
+.text-block {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-block h2 {
+  font-size: 28px;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+.text-block p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Image Block Styles */
+.image-block {
+  flex: 1;
+  text-align: center;
+}
+
+.image-block img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

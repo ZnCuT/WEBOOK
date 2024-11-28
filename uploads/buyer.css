@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #002D7A;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header h1 img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #002D7A;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #0048b5;
+}
+
+/* back page按钮样式 */
+.back-page-btn {
+    background-color: #1a3d91; /* 按钮的背景颜色 */
+    color: white; /* 文字颜色 */
+    border: none; /* 去掉边框 */
+    border-radius: 20px; /* 圆角效果 */
+    padding: 10px 20px; /* 内边距，让按钮有一定的大小 */
+    font-size: 16px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    align-items: center; /* 垂直居中 */
+    cursor: pointer; /* 鼠标悬停变成指针 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 轻微阴影效果 */
+}
+
+/* 鼠标悬停时的效果 */
+.back-page-btn:hover {
+    background-color: #294ea8; /* 悬停时改变背景颜色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 增加阴影效果 */
+}
+
+/* 按钮的点击效果 */
+.back-page-btn:active {
+    background-color: #0f2a72; /* 点击时的背景颜色 */
+    box-shadow: none; /* 去掉阴影 */
+}
+
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.product {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.product p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.product p.title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}

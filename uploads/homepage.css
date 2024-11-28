@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#seller-history {
+    padding: 20px;
+}
+
+header {
+    background-color: #3C5B92; /* 大标题背景色为蓝色 */
+    color: white; /* 字体颜色为白色 */
+    text-align: center; /* 标题居中对齐 */
+    padding: 20px; /* 标题内边距 */
+    margin: 0; /* 去除标题外边距 */
+}
+h1{
+    color: white; /* 设置标题颜色 */
+    text-align: center; /* 标题居中 */
+}
+.container {
+    display: flex;
+    justify-content: space-between; /* 左右两边对齐 */
+    padding: 20px;
+    height: 300px; /* Adding 'px' as the unit */
+}
+
+.left-sidebar {
+    flex: 1;
+    order: 1;
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px;
+    border: 10px #3C5B92 dashed;
+}
+
+.right-sidebar {
+    flex: 1;
+    order: 2; /* Adding the missing semicolon */
+    cursor: pointer;
+    padding: 20px;
+    margin: 20px;
+    border: 10px #3C5B92 solid;
+}

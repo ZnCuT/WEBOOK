@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBOOKS</title>
+    <link rel="stylesheet" href="../uploads/WEBOOK.css">
+    <script>
+        document.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="..\uploads\images\logo(2).png" alt="WeBook Logo"> <!-- 替换为实际LOGO -->
+        </div>
+        <a href="info.html">ABOUT US</a>
+    </nav>
+
+    <div class="container">
+        <h1>WeBook.</h1>
+        <h2>An idle books' data collecting web</h2>
+        <p>Facilitates a channel for book transactions <br>
+        Aligns with sustainable practices <br>
+        by promoting the reuse of idle books</p>
+        <button class="enter-btn" onclick="window.location.href='login.html'">ENTER</button>
+        <div class="enter-arrow"></div>
+    </div>
+</body>
+</html>
+

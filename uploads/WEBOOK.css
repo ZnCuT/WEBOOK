@@ -1,0 +1,103 @@
+/* 通用样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('background-image.jpg'); /* 替换为实际的背景图路径 */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+/* 顶部导航栏 */
+nav {
+    width: 95%;
+    padding: 15px 50px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #929292;
+}
+
+/* Logo 样式 */
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* 标题和副标题 */
+h1 {
+    font-size: 60px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* 文字描述 */
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* ENTER 按钮 */
+.enter-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.enter-btn:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* 箭头样式 */
+.enter-arrow {
+    display: block;
+    margin: 30px auto 0;
+    width: 40px;
+    height: 40px;
+    background-image: url('arrow-icon.png'); /* 替换为实际的箭头图标 */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+

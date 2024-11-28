@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../uploads/login.css">
+</head>
+<body>
+    <nav>
+    </div>
+    <a href="WEBOOK.html">HOME PAGE</a>
+    </nav>
+    <div class="login-container">
+        <img src="../uploads/images/logo.png"> <!-- 实际logo图片 -->
+        <h2>Login</h2>
+        <form method="POST" action="{{ url_for('login') }}">
+            <label for="username">Username:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <a href="{{ url_for('register') }}">Register here</a></a>
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+        <a href="forgot_password.html">FORGET PASSWORD?</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../uploads/homepage.css">
+</head>
+<header>
+    <h1>Homepage</h1>
+</header>
+<body>
+    <div class="left-sidebar">
+            <ul>
+        {% for product in products %}
+            <li>
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <p>Price: ${{ product.price }}</p>
+                <p>{{product.degree_of_wear}}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="right-sidebar">
+        
+    </div>
+</body>
+    </div>
+
+</html>

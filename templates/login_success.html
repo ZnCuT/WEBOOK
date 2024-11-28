@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHOOSE YOUR IDENTITY</title>
+    <link rel="stylesheet" href="../uploads/login_success.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="../uploads/images/logo(2).png" alt="WeBook Logo"> <!-- 替换为实际LOGO -->
+        
+    </div>
+    <div >
+        <button class="profile-btn" onclick="goToHomePage()">HOME PAGE</button>
+    </div>
+
+</header>
+
+    <main>
+        <h2>What is your identity?</h2>
+        <p>Enter different interfaces by selecting</p>
+        <div class="identity-container">
+            <a href="search.html" class="identity-card buyer">
+                <i class="icon-cart"></i>
+                <h3>I am Buyer</h3>
+                <p>Search for books</p>
+                <p>Related recommendations</p>
+                <p>Add contact information</p>
+            </a>
+            <a href="seller.html" class="identity-card seller">
+                <i class="icon-sold"></i>
+                <h3>I am Seller</h3>
+                <p>Upload products</p>
+                <p>Provide information</p>
+                <p>Leave contact information</p>
+            </a>
+        </div>
+    </main>
+
+<script>
+    function goToHomePage() {
+        window.location.href = 'WEBOOK.html';
+    }
+
+</script>
+
+</body>
+</html>
