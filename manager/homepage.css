@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh; /* 页面高度等于视口高度 */
+}
+
+h1 {
+    font-size: 50px; /* 设置段落字体大小 */
+    line-height: 0; /* 设置行高 */
+    color:white;
+}
+
+h2 {
+    font-size: 40px; /* 设置段落字体大小 */
+    line-height: 0; /* 设置行高 */
+    color:white;
+}
+
+.logo{
+    max-width: 400px;
+    height: auto;
+
+    margin-top:4px;
+
+
+}
+
+/* 左侧部分样式 */
+.left-label {
+    background-color: #3C5B92; /* 蓝色背景 */
+    color: white; /* 白色文字 */
+    width: 22%; /* 左栏宽度占页面 30% */
+    display: flex;
+    flex-direction: column; /* 子元素纵向排列 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    padding: 20px;
+    margin-right: 20px;
+}
+
+/* 右侧部分样式 */
+.container {
+    width: 78%; /* 右侧宽度占页面 70% */
+    display: flex; /* 水平布局 */
+    justify-content: space-between; /* 子元素两端对齐 */
+    padding: 20px;
+    background-color: #f5f5f5; /* 浅灰色背景 */
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+/* 左框样式 */
+.left-column {
+    flex: 2.5; /* 左框占用剩余空间 */
+    border: 5px solid #3C5B92; /* 蓝色边框 */
+    background-color: #ffffff; /* 白色背景 */
+    padding: 10px;
+    margin-right: 20px; /* 与右框之间的间距 */
+    display: flex; /* 子元素使用 Flex 布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+    gap: 25px; /* 分栏之间的间距 */
+    overflow-y: auto; /* 内容超过时滚动 */
+    border-radius: 20px;
+}
+
+/* 小方框样式 */
+.box-item {
+    background-color: #e0e7ff; /* 浅蓝色背景 */
+    border: 1px solid #3C5B92; /* 蓝色边框 */
+    border-radius: 8px; /* 圆角边框 */
+    padding: 15px;
+    min-height: 180px;
+    display: flex; /* 图片和文字水平排列 */
+    align-items: center; /* 水平对齐 */
+    gap: 10px; /* 图片与文字之间的间距 */
+    position: relative; /* 添加相对定位 */
+}
+
+.box-item img {
+    width: 160px; /* 图片宽度 */
+    height: 210px; /* 图片高度 */
+    border-radius: 4px; /* 图片圆角 */
+    object-fit: cover; /* 保持图片比例 */
+}
+
+.box-item p {
+    margin: 0; /* 去除段落的默认外边距 */
+    font-size: 20px; /* 调整文字大小 */
+    color: #333; /* 深灰色文字 */
+}
+
+.right-column {
+    flex: 0.5; /* 右框占用剩余空间 */
+    border: 5px dashed #3C5B92; /* 蓝色边框 */
+    background-color: #ffffff; /* 白色背景 */
+    padding: 20px;
+    margin-left: 20px; /* 与左框之间的间距 */
+    display: flex; /* 使用 Flex 布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+    align-items: center; /* 水平居中对齐 */
+    justify-content: center; /* 垂直居中对齐 */
+    gap: 25px; /* 分栏之间的间距 */
+    overflow-y: auto; /* 内容超过时滚动 */
+    border-radius: 20px;
+}
+
+.remove-btn {
+    position: absolute; /* 绝对定位 */
+    bottom: 20px; /* 离底部 10px */
+    right: 20px; /* 离右边 10px */
+    background-color: #3C5B92; /* 红色背景 */
+    color: white; /* 白色文字 */
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    align-self: flex-end; /* 将按钮放置在方框右上角 */
+}
+
+.remove-btn:hover {
+    background-color: #2C4878; /* 鼠标悬停时更深的红色 */
+}
+
+/* 导航栏样式 */
+nav ul {
+    list-style-type: none; /* 去掉默认的列表样式 */
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 100px; /* 列表项之间的间距 */
+}
+
+nav ul li h4 {
+    font-size: 18px; /* 一级标题大小 */
+    color: #3C5B92; /* 蓝色标题 */
+    margin-bottom: 10px;
+}
+
+nav ul li h5 {
+    font-size: 14px; /* 二级标题大小 */
+    color: #666666; /* 灰色文字 */
+    margin: 0.5;
+}
+
+

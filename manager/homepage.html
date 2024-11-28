@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <!-- 左侧部分 -->
+    <div class="left-label">
+        <img src="white-MElogo.png" alt="MELogo" class="logo">
+        <h1>My</h1>
+        <h2>Homepage</h2>
+    </div>
+
+    <!-- 右侧部分 -->
+    <div class="container">
+        <!-- 左框：由多个独立方框组成 -->
+        <div class="left-column">
+
+            <!--这段代码目前被定死，看后端接口需要再修改-->
+            <div class="box-item">
+                <img src=数据结构与算法.jpg alt="Placeholder Image">
+                <p>Data structures and algorithms</p>
+                <p>Price：￥20</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="box-item">
+                <img src=机器学习基础.jpg alt="Placeholder Image">
+                <p>Fundamentals of machine learning</p>
+                <p>Price:￥35</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="box-item">
+                <img src=深度学习导论及案例分析.jpg alt="Placeholder Image">
+                <p>Introduction to deep learning</p>
+                <p>Price:￥45</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div id="items-container">
+            <!-- 动态生成的 box-item 会被插入到这里 -->
+            </div>
+
+        </div>
+
+        <!-- 右框：导航栏 -->
+        <div class="right-column">
+            <nav>
+                <ul>
+                    <li>
+                        <h4>Help Center</h4>
+                        <h5>User Guide</h5>
+                        <h5>Contact Us</h5>
+                    </li>
+                    <li>
+                        <h4>Information Center</h4>
+                        <h5>Network Security Note</h5>
+                        <h5>Report Feedback</h5>
+                    </li>
+                    <li>
+                        <h4>About Us</h4>
+                        <h5>Homepage</h5>
+                        <h5>User Agreement</h5>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <script src="homepage.js"></script>
+</body>
+</html>

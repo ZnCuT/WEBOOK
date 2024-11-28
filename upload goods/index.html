@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 设置视口，确保响应式设计 -->
+    <title>Upload book information</title> <!-- 网页标题，显示在浏览器标签上 -->
+
+    <!-- 外部 CSS 样式表链接 -->
+    <link rel="stylesheet" href="upload_book.css"> <!-- 引用外部样式表，用于美化网页 -->
+
+</head>
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <h1>Upload My Book</h1>
+        <h2>Select the book you want to upload and fill in the following</h2>
+    </header>
+
+
+
+    <!-- 主体内容区域 -->
+    <main>
+        <div class="container">
+            <aside class="left-sidebar" onclick="uploadImage()">
+                <h3>Upload pictures of the book (CLICK HERE):</h3>
+                <p>only ONE picture </p>
+            </aside>
+            <aside class="right-sidebar" onclick="enterText()">
+               <h3>Add a detail description of the item (CLICK HERE):</h3>
+                <p>such as book information, old and new, price, etc</p>
+                <h3>Remember to add your email</h3>
+            </aside>
+
+
+
+        </div>
+
+
+    </main>
+    <footer class="release" onclick="saveContent()">
+        <h2>Release commodities</h2>
+
+        <p>&copy; 2024 WEBOOK. All rights reserved.</p>
+
+    </footer>
+    <!-- 页脚区域 -->
+
+
+
+    <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="displayImage(event)">
+
+</body>
+
+<!-- 引用外部 JavaScript 文件 -->
+<script src="upload_book.js"></script> <!-- 用于引入 JavaScript 文件 -->
+
+</html>
