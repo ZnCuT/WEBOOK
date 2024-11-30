@@ -5,25 +5,66 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="../uploads/homepage.css">
 </head>
-<header>
-    <h1>Homepage</h1>
-</header>
 <body>
-    <div class="left-sidebar">
-            <ul>
-        {% for product in products %}
-            <li>
-                <h2>{{ product.name }}</h2>
-                <p>{{ product.description }}</p>
-                <p>Price: ${{ product.price }}</p>
-                <p>{{product.degree_of_wear}}</p>
-            </li>
-        {% endfor %}
-    </ul>
-    <div class="right-sidebar">
-        
+    <div class="left-label">
+        <img src="../uploads/white-MElogo.png" alt="MELogo" class="logo">
+        <h1>My</h1>
+        <h2>Homepage</h2>
     </div>
-</body>
+    <div class="container">
+        <div class="left-column">
+            <div class="box-item">
+                <ul>
+                    {% for product in products %}
+                    <li class="box-item" data-id="{{product.id}}">
+                        <img src="{{ product.image }}" alt="Product Image">
+                        <p>description:{{ product.description }}</p><br><br>
+                        <!-- <p>Price: ${{ product.price }}</p>
+                        <p>degree_of_wear:{{product.degree_of_wear}}</p> -->
+                        <button class="remove-btn" onclick="deleteItem('{{product.id}}')">Remove</button>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <!-- 右框：导航栏 -->
+        <div class="right-column">
+            <nav>
+                <ul>
+                    <li>
+                        <h4>Help Center</h4>
+                        <h5>User Guide</h5>
+                        <h5>Contact Us</h5>
+                    </li>
+                    <li>
+                        <h4>Information Center</h4>
+                        <h5>Network Security Note</h5>
+                        <h5>Report Feedback</h5>
+                    </li>
+                    <li>
+                        <h4>About Us</h4>
+                        <h5>Homepage</h5>
+                        <h5>User Agreement</h5>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 
+    <script>
+        function deleteItem(itemId) {
+            fetch(`/products/${itemId}`, { method: 'DELETE' })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data.message);
+                    document.querySelector(`[data-id="${itemId}"]`).remove();
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
 </html>
