@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <title>Search</title>
     <link rel="stylesheet" href="../uploads/buyer.css">
+    <style>
+        .product-image {
+    width: 100px;
+    height: 100px;
+        }
+
+        .results {
+            margin-top: 2em;
+        }
+        .results h2 {
+            margin-bottom: 1em;
+        }
+        .results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .results li {
+            background-color: white;
+            padding: 1em;
+            margin-bottom: 1em;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+        .results a {
+            text-decoration: none;
+            color: #333;
+        }
+        .results a:hover {
+            text-decoration: underline;
+        }
+        .back-to-search:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
-<header>
-   <h1>Search</h1>
-</header>
 <body>
+    <header>
+       <h1>Search</h1>
+    </header>
     <div class="search-bar">
         <form method="post" action="{{ url_for('search') }}">
             <input type="text" name="query" placeholder="Enter book name">
@@ -23,6 +57,23 @@
             </ul>
           {% endif %}
         {% endwith %}
+        {% if results %}
+    </div>
+    <div class="results">
+        <h2>Search Results for "{{ query }}"</h2>
+        <ul>
+            {% for result in results %}
+                <li>
+                    <img src="{{ result.image }}" alt="Product Image" class="product-image">
+                    <a href="{{ url_for('book_detail', id=result.id) }}">{{ result.name }} - {{ result.email }}</a>
+                    <a href="{{ url_for('book_details', id=result.id) }}" style="display:block; margin-top:10px;">Buy and Remove</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+  {% endif %}
+  <a href="{{ url_for('search') }}">Back to search</a>
+        </ul>
     </div>
 </body>
 </html>
