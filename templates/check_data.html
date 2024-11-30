@@ -2,25 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Product Details</title>
     <link rel="stylesheet" href="../uploads/buyer.css">
 </head>
 <body>
-    <h1>Product Details</h1>
-    {% if products %}
-        {% for product in products %}
-            <div>
-                <h2>{{ product.name }}</h2>
-                <p><strong>Price:</strong> {{ product.price }}</p>
-                <p><strong>Description:</strong> {{ product.description }}</p>
-                <p><strong>Degree of Wear:</strong> {{ product.degree_of_wear }}</p>
-                {% if product.image %}
-                    <img src="{{ product.image }}" alt="Product Image">
-                {% endif %}
+<header>
+    <img src="../uploads/white-logo.png" alt="企业Logo" class="logo">
+    <h1>Commodity Interface</h1>
+    <!-- 页面装饰线条 -->
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="left-line"></div>
+    <div class="right-line"></div>
+</header>
+    <div class="container">
+        <div class="container">
+            <div class="left">
+                <ul>
+                    {% for product in products %}
+                    <li class="box-item" data-id="{{product.id}}">
+                        <img src="{{ product.image }}" alt="Product Image">
+                    </li>
+            <h2 id="book-title">书名: {{product.name}}</h2>
+            {% endfor %}
+        </div>
+
+        <!-- 右侧内容 -->
+        <div class="right">
+            <div class="book-info">
+                {% for product in products %}
+                    <h3>卖家信息</h3>
+                    <p><strong>卖家名称:</strong> <span id="seller-name">{{ product.id }}</span></p>
+                    <p><strong>定价:</strong> <span id="price">{{ product.price }}</span></p>
+                    <p><strong>描述:</strong> <span id="description">{{ product.description }}</span></p>
+                    <p><strong>书籍状态:</strong> <span id="book-condition">{{ product.degree_of_wear }}</span></p>
+                {% endfor %}
             </div>
-        {% endfor %}
-    {% else %}
-        <p>No product details found.</p>
-    {% endif %}
+        </div>
+        <footer><p>&copy; 2024 WEBOOK. All rights reserved.</p></footer>
+        <!-- <a href="search.html" target="_blank" class="Return-to-search-box">Return to search box</a> -->
+    <script src="../static/commodity.js"></script>
 </body>
 </html>
